@@ -1,0 +1,54 @@
+<mat-drawer-container class="dr-container" [hasBackdrop]="true">
+  <mat-drawer #drawer class="sidenav-ex" mode="over">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <mat-toolbar color="primary">
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label=""
+        (click)="drawer.toggle()"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Agenda Ai!</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="setDarkMode()">
+        <mat-icon *ngIf="isDarkMode">dark_mode</mat-icon>
+        <mat-icon *ngIf="!isDarkMode">light_mode</mat-icon>
+      </button>
+      <button mat-icon-button (click)="selectToday()">
+        <mat-icon>event</mat-icon>
+      </button>
+    </mat-toolbar>
+    <div class="portal">
+      <div class="calendario">
+        <div
+          class="calendario-dia"
+          [ngClass]="{ active: dia.current }"
+          *ngFor="let dia of diasDaSemana"
+          (click)="selectDay(dia)"
+        >
+          <span class="dateOfWeek">{{ getDiaDaSemana(dia.data) }}</span>
+          <span class="dayOfWeek">{{ dia.dia }}</span>
+        </div>
+      </div>
+      <div class="main"><router-outlet></router-outlet></div>
+    </div>
+
+    <!-- <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button> -->
+  </div>
+  <div class="fab-menu">
+    <button mat-fab class="button-fab" (click)="abrirModalNovoAgendamento()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</mat-drawer-container>
