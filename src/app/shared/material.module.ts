@@ -15,7 +15,23 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { PortalModule } from '@angular/cdk/portal';
 
 @NgModule({
-  imports: [],
+  imports: [
+    LayoutModule,
+    PortalModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatIconModule,
+    MatTableModule,
+    MatTabsModule,
+    MatSidenavModule,
+    MatSnackBarModule,
+    MatSelectModule,
+    MatCardModule,
+  ],
   exports: [
     LayoutModule,
     PortalModule,

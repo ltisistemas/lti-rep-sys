@@ -31,13 +31,13 @@ export class EfetuarLoginService {
       id: response.data.id,
       nome: response.data.nome,
       email: response.data.email,
-      empresa_id: response.data.empresa_id,
+      perfil: response.data.perfil,
       status: response.data.status,
     } as UsuarioLogado;
 
     const accessToken = this.jwt.generate(
       usuarioLogado.id,
-      usuarioLogado.empresa_id,
+      usuarioLogado.perfil,
       usuarioLogado.nome,
       usuarioLogado.email
     );

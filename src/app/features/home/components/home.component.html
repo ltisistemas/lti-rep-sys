@@ -17,17 +17,17 @@
       >
         <mat-icon>menu</mat-icon>
       </button>
-      <span>Agenda Ai!</span>
+      <span>LTI RepSys!</span>
       <span class="spacer"></span>
       <button mat-icon-button (click)="setDarkMode()">
         <mat-icon *ngIf="isDarkMode">dark_mode</mat-icon>
         <mat-icon *ngIf="!isDarkMode">light_mode</mat-icon>
       </button>
-      <button mat-icon-button (click)="selectToday()">
+      <!-- <button mat-icon-button (click)="selectToday()">
         <mat-icon>event</mat-icon>
-      </button>
+      </button> -->
     </mat-toolbar>
-    <div class="portal">
+    <!-- <div class="portal">
       <div class="calendario">
         <div
           class="calendario-dia"
@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="main"><router-outlet></router-outlet></div>
-    </div>
+    </div> -->
 
     <!-- <button type="button" mat-button (click)="drawer.toggle()">
       Toggle sidenav

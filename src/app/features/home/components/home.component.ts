@@ -7,8 +7,6 @@ import { UsuarioLogadoUsecaseService } from 'src/app/shared/services/usuario-log
 import { environment } from 'src/environments/environment';
 import { IDay } from '../entities/day';
 import { DarkThemeService } from 'src/app/shared/services/dark-theme.service';
-import { NovoAgendamentoComponent } from '../../novo-agendamento/components/novo-agendamento.component';
-import { ResultDialog } from '../../novo-agendamento/entities/result-dialog';
 
 @Component({
   selector: 'app-home',
@@ -178,20 +176,19 @@ export class HomeComponent implements OnInit {
   }
 
   abrirModalNovoAgendamento() {
-    const ref = this.utils.abrirModal({
-      component: NovoAgendamentoComponent,
-      data: {},
-    });
-
-    ref.afterClosed().subscribe({
-      next: (result: ResultDialog) => {
-        if (!result.closed) {
-        }
-      },
-      error: (err: any) => {
-        this.utils.message('Erro ao salvar os dados!');
-      },
-    });
+    // const ref = this.utils.abrirModal({
+    //   component: NovoAgendamentoComponent,
+    //   data: {},
+    // });
+    // ref.afterClosed().subscribe({
+    //   next: (result: ResultDialog) => {
+    //     if (!result.closed) {
+    //     }
+    //   },
+    //   error: (err: any) => {
+    //     this.utils.message('Erro ao salvar os dados!');
+    //   },
+    // });
   }
 
   abrirModalCliente() {

@@ -5,16 +5,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeComponent } from './components/home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { MainComponent } from '../main/main.component';
-import { NovoAgendamentoComponent } from '../novo-agendamento/components/novo-agendamento.component';
-import { NovoAgendamentoModule } from '../novo-agendamento/novo-agendamento.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    HomeRoutingModule,
-    NovoAgendamentoModule,
-  ],
+  imports: [CommonModule, SharedModule, HomeRoutingModule],
   exports: [],
   declarations: [HomeComponent, MainComponent],
   providers: [],

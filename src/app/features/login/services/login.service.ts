@@ -45,7 +45,7 @@ export class LoginService {
         id: doc.id,
         email: data.email,
         nome: data.nome,
-        empresa_id: data.empresa_id,
+        perfil: data.perfil,
         status: data.status,
       } as UsuarioLogado;
 
